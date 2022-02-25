@@ -1,0 +1,353 @@
+
+/*Body*/
+
+body{
+
+    background-color: ivory;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 5fr 1fr;
+    overflow-x: hidden;
+    
+}
+
+/*Header*/
+
+header{
+
+    display: flex;
+    flex-direction: row;
+}
+
+#logo{
+
+    height: 225px;
+    width: 375px;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+nav{
+    width: 100%;
+}
+
+#barra{
+
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    color: black;
+    list-style-type: none;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.elementosBarra:hover {
+    background-color: rgba(137, 43, 226, 0.151);
+    padding: 0px 10px 0px 10px;
+}
+
+
+/*Main*/
+
+
+
+main {
+    font-family: 'Jost', sans-serif;
+}
+
+#titulo {
+    text-align: center;
+}
+
+
+.productos {
+    font-family: 'Jost', sans-serif;
+    border: 5px black solid;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    height: 300px;
+    width: 325px;
+    margin-left: 100px;
+}
+
+/*Footer*/
+
+footer{
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    font-family: 'Jost', sans-serif;
+    width: 100vw;
+    border: 5px black solid;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#navFooter{
+
+    list-style-type: none;
+}
+
+/*Productos*/
+
+#tituloProductos{
+
+    text-align: center;
+}
+
+
+/*Como Comprar*/
+
+#cuadrosPasos{
+
+    display:grid ;
+    grid-template-columns: repeat(3, 33vw);
+    grid-template-rows: 15vh;
+    justify-items: center;
+}
+
+.pasos{
+    
+    color: black;
+    background-color: palevioletred;
+    border: 3px orchid solid;
+}
+
+
+/*Nosotros*/
+
+#gridCuadros{
+
+    display: grid;
+    grid-template-columns: repeat(3, 33vw);
+    grid-template-rows: 80vh;
+
+}
+
+.recuadro {
+    border: 5px palevioletred solid;
+   
+    margin-bottom: 10px;
+    padding: 0 5px 0 5px;
+}
+
+#recuadro1 {
+    background-color: lightpink;
+}
+
+#recuadro2 {
+    background-color: rgb(231, 177, 186);
+}
+
+#recuadro3 {
+    background-color: rgb(177, 136, 185);
+}
+
+/*Contacto*/
+
+#formulario{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#form{
+    align-content: center;
+    text-align: center;
+    background-color: palevioletred;
+    border: 3px orchid solid;
+    width: 350px;
+    height: 375px;
+    
+
+}
+
+/*Media Query 600px a 992px*/
+
+
+@media only screen and (min-width: 600px) and (max-width:992px){
+
+    header{
+
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
+        
+        
+    }
+
+    #barra{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    #logo{
+
+        justify-self: center;
+        margin-right: 100px;
+    }
+
+    #gridImagenes{
+
+        display: grid;
+        width: 100vw;
+        height: 80vh;
+        grid-template-columns: repeat(3, 33vw);
+        grid-template-rows: 15vh;
+        row-gap: 5px;
+        grid-template-areas:"a1 a2 a3"
+                            "a4 a5 a6" 
+                            "a7 a8 a9"
+                            "a10 a11 a12";
+        justify-items: center;
+        align-items: center;
+    }
+
+    #titulo{
+
+        margin-top: 5px;
+    }
+
+    .productos{
+
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+
+    #gridcuadros{
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 100vw);
+        grid-auto-flow: column;
+
+    }
+
+    #cuadrosPasos{
+
+        display:grid ;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 30vw);
+        row-gap: 10px;
+        justify-content: center;
+   
+    }
+    
+}
+
+/*Media Query 600px ancho máximo*/
+
+@media only screen and (max-width: 600px){
+
+    body{
+
+        background-size: cover;
+        overflow-x: hidden;
+         
+    }
+
+    header{
+
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100px;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+
+    #logo{
+
+        margin-right: 100px;
+        width: 65vw;
+
+    }
+
+
+    #barra{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    .elementosBarra{
+        
+        padding: 5px 5px 5px 5px;
+    }
+
+    #gridImagenes{
+
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 100vh;
+        grid-auto-flow: column;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: "a1"
+                             "a2"
+                             "a3"
+                             "a4"
+                             "a5"
+                             "a6"
+                             "a7"
+                             "a8"
+                             "a9"
+                             "a10"
+                             "a11"
+                             "a12";
+    }
+
+     #gridcuadros{
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 100vw);
+        grid-auto-flow: column;
+
+    }
+
+    #tituloProductos{
+
+        text-align: center;
+
+    }
+
+    #cuadrosPasos{
+
+        display:grid ;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 30vw);
+        row-gap: 10px;
+        justify-content: center;
+   
+    }
+
+    footer{
+
+        margin-top: 10px;
+    }
+
+}
+
+
